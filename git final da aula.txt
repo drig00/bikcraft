@@ -1,0 +1,5 @@
+fim de toda aula adicionar no github:
+git status para ver o que foi modificado
+git add -A
+git commit -m "escreva_commit_aqui"
+git push
