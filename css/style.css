@@ -20,6 +20,7 @@
 
 /* Bicicletas-Página única */
 @import "./bicicleta/bicicleta.css";
+@import "./bicicleta/seguro-bike.css";
 
 /* Seguros */
 @import "./seguros/seguros.css";
