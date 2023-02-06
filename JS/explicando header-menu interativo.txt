@@ -1,0 +1,14 @@
+-Header-menu interativo:
+-selecionou todos os links de .header-menu com o querySelectorAll(".header-menu a"). Retornou uma lista
+-para cada um dos links ele ativou uma função pois queremos que ao usuário clicar em cada um dos links aconteça alguma coisa. Por isso usamos o forEach(ativarLink)
+passando a função ativarLink
+-na função ativarLink temos acesso ao elemento em si ao passarmos um parâmetro, então fazemos para que possamos falar com cada link em específico e colocamos o href do link
+em uma variável(const href = link.href)
+-queremos comparar o href do link com o href da página, por isso também guardamos o href da página em uma constante para fazer a comparação na condição
+(const url = window.location.href)
+- na condição não podemos simplesmente comparar os dois links(if(href === url){}) pois tem certo momento na parte de contato do site em que podemos enviar uma mensagem,
+e essa mensagem é feita por um formulário, que ao ser enviado muda a configuração do url da página. Então se fizermos uma comparação e clicarmos em contato o efito não
+vai funcionar pois os links não seram exatamente iguais. Toda string tem um método chamado string.includes("texto aqui") no qual você pode passar um texto e o JS vai
+procurar para saber se esse texto digitado aparece na string, usaremos isso para comparar e poder checar se os links estão contidos um no outro, se sim adicionamos uma
+classe chamada "ativo" no link do menu. Usando essa classe recém criada que editaremos o estilo do site por CSS
+-o que fizemos no CSS foi dizer que no .header-menu o a que tivesse a classe .ativo teria no seu ::after a width de 100%
