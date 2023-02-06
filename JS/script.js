@@ -27,3 +27,26 @@ function chamarItem(parametro) {
 parametros.forEach(chamarItem);
 
 // console.log(parametros);
+
+// PERGUNTAS FREQUÊNTES
+const perguntas = document.querySelectorAll(".perguntas button");
+
+function mostrarPergunta(event) {
+  const pergunta = event.currentTarget;
+  const controls = pergunta.getAttribute("aria-controls");
+  const resposta = document.getElementById(controls);
+
+  resposta.classList.toggle("ativa");
+  const ativa = resposta.classList.contains("ativa");
+  if (ativa) {
+    pergunta.setAttribute("aria-expanded", "true");
+  } else {
+    pergunta.setAttribute("aria-expanded", "false");
+  }
+}
+
+function ativarPergunta(pergunta) {
+  pergunta.addEventListener("click", mostrarPergunta);
+}
+
+perguntas.forEach(ativarPergunta);
